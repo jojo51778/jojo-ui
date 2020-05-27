@@ -1,5 +1,15 @@
-$border-radius: 4px;
-
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+$border-color: rgba(34,36,38,.15); 
+$border-style: 1px solid $border-color;
+$border-radius: 3px;
+$padding-vertical: .785em;
+$padding-horizontal: .925em;
+$card-border-color: rgba(34,36,38,.1);
+$card-border-style: 1px solid $card-border-color;
 $primary: #409EFF;
 $success: #67C23A;
 $warning: #E6A23C;
@@ -17,8 +27,18 @@ $success-active: #5daf34;
 $warning-active: #cf9236;
 $danger-active: #dd6161;
 $info-active: #82848a;
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+
+@mixin transition($v) {
+  -webkit-transition: $v;
+  -moz-transition: $v;
+  transition: $v;
+}
+@mixin box-shadow() {
+  box-shadow: 0px 2px 3px 0px $border-color;
+}
+@mixin border() {
+  border: $border-style;
+}
+@mixin padding() {
+  padding: $padding-vertical $padding-horizontal;
 }
