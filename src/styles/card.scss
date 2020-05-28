@@ -1,4 +1,4 @@
-@import './_var.scss';
+@import './base.scss';
 
 .jojo-card {
   position: relative;
@@ -52,5 +52,30 @@
   }
   > .footer {
     @include padding;
+  }
+}
+
+.jojo-cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -$padding-horizontal/2;
+  align-items: flex-start;
+  > .jojo-card {
+    margin: $padding-horizontal/2;
+  }
+  &.two > .jojo-card {
+    width: calc(50% - 0.925em)
+  }
+  &.three > .jojo-card {
+    width: calc(33.333% - 0.925em)
+  }
+  &.four > .jojo-card {
+    width: calc(25% - 0.925em)
+  }
+  &.five > .jojo-card {
+    width: calc(20% - 0.925em)
+  }
+  &.six > .jojo-card {
+    width: calc(16.666% - 0.925em)
   }
 }
